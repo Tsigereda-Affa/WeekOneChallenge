@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -47,11 +48,29 @@ public class Main {
         System.out.println("Cost of item 2:"+cost2);
         double TotalPerchaseAmount =(cost1+cost2);
         System.out.println("Total Perchase Amount:"+ TotalPerchaseAmount);
-        System.out.println("Item Name:\tPrice\tQuantity\tCost");
-        System.out.println(itemName01 + "\t       $"+ itemPriceo1 + " \t    " + iteamQuantity01 + "      \t$" + cost1);
-        System.out.println(itemName02 + "\t       $" + itemPriceo2 + "  \t    " + iteamQuantity02 + "      \t$" + cost2);
+        System.out.println("Item Name:\tPrice\t Quantity\t Cost");
+        System.out.println(itemName01 + "\t      $"+ itemPriceo1 + " \t   " + iteamQuantity01 + "     \t$" + cost1);
+        System.out.println(itemName02 + "\t      $" + itemPriceo2 + " \t   " + iteamQuantity02 + "      \t$" + cost2);
         System.out.println("Total Perchase Amount:"+ "$" + TotalPerchaseAmount);
+        //BONUS:
 
+        //Generate a random number from 1-10 for each item's quantity amount
+        //If you spend more than $20, print "You spent too much today..." to the console
+        //Otherwise, print "Thank you for shopping at my market!"
+        Random ran1 = new Random();
+        int quantityamount1 = 1 +ran1.nextInt(10);
+        System.out.println("First quantity amount:" + quantityamount1);
+
+
+        Random ran2 = new Random();
+        int quantityamount2 = 1 +ran1.nextInt(10);
+        System.out.println("Second quantity amount:" + quantityamount2 );
+
+        if ( TotalPerchaseAmount >20){
+            System.out.println("You spent too much today..." );
+        }else{
+            System.out.println("Thank you for shopping at my market!");
+        }
 
     }
 }
